@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <title>How is he?</title>
+        <link rel="stylesheet" type="text/css" href="howIsHeCSS.css" />
+	</head>
+
+
+    <body background="backGround.gif">
+
+        <script>
+            var sports, sportsT, media, mediaT, games, gamesT
+            sportsT = "Sports I like to play"
+            sports = "I am a fan of football, pingpong, billiards. I played pingpong for the most time, I love football most but I find billiard most relaxing. My favoriate football player is Robert Lewandowski" + " " +
+                "and Thomas Muller, therefore my favoriate club is Bayen. I enjoy playing billiards with my friends most."
+            mediaT = "Songs and music I like"
+            media = "From junior high I started to listen songs, I preferred english songs at first, then one day I found that domestic songs are not bad at all, and after another period of time, I started" + " " +
+                "watching japanese animations, that's also when I started to like japanese songs. Below is a song I like." + " " + "For movies I love hollywood ever since I watched <Saving private ryan>, Then I" + " " +
+                "became a huge fan of Marvel studios when <Iron man> came out which is still one of my favoriate movies"
+            gamesT = "Games I like to play"
+            games = "I've been a game fan since I was in primary school, I've played a lot, my favoriate game seiries are <Call of duty>, <Assassins' creed>, the game I like the most is <Sekiro: Shadows die twice>," + " " +
+                "the game won the 'game oscar' in 2019"
+        </script>
+
+        <div id="header">
+            <h1>How is he?</h1>
+            <h2>Hobbies</h2>
+        </div>
+
+        <div id="nav">
+            <button type="button" onclick='document.getElementById("content").innerHTML = sports;
+                                            document.getElementById("headline").innerHTML = sportsT;
+                                            document.getElementById("SpicBut1").style.display = "block";
+                                            document.getElementById("HpicBut1").style.display = "block";
+                                            document.getElementById("SpicBut2").style.display = "none";
+                                            document.getElementById("HpicBut2").style.display = "none";
+                                            document.getElementById("sportsPic1").style.display = "none";
+                                            document.getElementById("sportsPic2").style.display = "none";
+                                            document.getElementById("gamesPic1").style.display = "none";
+                                            document.getElementById("gamesPic2").style.display = "none";
+                                            document.getElementById("audio").style.display = "none";'
+                style="font-size:30px">Sports</button><br />
+            <button type="button" onclick='document.getElementById("content").innerHTML = media;
+                                            document.getElementById("headline").innerHTML = mediaT;
+                                            document.getElementById("SpicBut1").style.display = "none";
+                                            document.getElementById("HpicBut1").style.display = "none";
+                                            document.getElementById("SpicBut2").style.display = "none";
+                                            document.getElementById("HpicBut2").style.display = "none";
+                                            document.getElementById("sportsPic1").style.display = "none";
+                                            document.getElementById("sportsPic2").style.display = "none";
+                                            document.getElementById("gamesPic1").style.display = "none";
+                                            document.getElementById("gamesPic2").style.display = "none";
+                                            document.getElementById("audio").style.display = "block";'
+                style="font-size:30px">Songs&movies</button><br />
+            <button type="button" onclick='document.getElementById("content").innerHTML = games;
+                                            document.getElementById("headline").innerHTML = gamesT;
+                                            document.getElementById("SpicBut1").style.display = "none";
+                                            document.getElementById("HpicBut1").style.display = "none";
+                                            document.getElementById("SpicBut2").style.display = "block";
+                                            document.getElementById("HpicBut2").style.display = "block";
+                                            document.getElementById("sportsPic1").style.display = "none";
+                                            document.getElementById("sportsPic2").style.display = "none";
+                                            document.getElementById("gamesPic1").style.display = "none";
+                                            document.getElementById("gamesPic2").style.display = "none";
+                                            document.getElementById("audio").style.display = "none";'
+                style="font-size:30px">Games</button>
+        </div>
+
+        <div id="section">
+            <h2 id="headline" style="font-size:45px"></h2>
+            <p id="content" style="font-size:30px"></p>
+            <button id="SpicBut1" onclick='document.getElementById("sportsPic1").style.display = "block";
+                                            document.getElementById("sportsPic2").style.display = "block" '
+                style="display:none; font-size:20px">Show pictures</button>
+            <button id="HpicBut1" onclick='document.getElementById("sportsPic1").style.display = "none";
+                                            document.getElementById("sportsPic2").style.display = "none" '
+                style="display:none; font-size:20px">Hide pictures</button>
+            <button id="SpicBut2" onclick='document.getElementById("gamesPic1").style.display = "block";
+                                            document.getElementById("gamesPic2").style.display = "block" '
+                style="display:none; font-size:20px">Show pictures</button>
+            <button id="HpicBut2" onclick='document.getElementById("gamesPic1").style.display = "none";
+                                            document.getElementById("gamesPic2").style.display = "none" '
+                style="display:none; font-size:20px">Hide pictures</button>
+            <img id="sportsPic1" style="display:none" src="lewan.jpg" alt="Lewandowski" width="1280" height="720"/>
+            <img id="sportsPic2" style="display:none" src="billiard.jpg" alt="Billiard" width="1280" height="720"/>
+            <img id="gamesPic1" style="display:none" src="cod.jpg" alt="Chengdu" width="1280" height="720"/>
+            <img id="gamesPic2" style="display:none" src="SekiroDragon.jpg" alt="Du fu thatched" width="1280" height="720"/>
+            <audio id="audio" style="display:none" controls="controls" height="200" width="200">
+                <source src="song.mp3"; type="audio/mp3" />
+            <embed height="200" width="200" src="song.mp3" />
+            </audio>
+        </div>
+
+        <div id="footer">
+            <a href="home.html"><button style="font-size:30px">Back to homepage</button></a>
+        </div>
+    </body>
+</html>

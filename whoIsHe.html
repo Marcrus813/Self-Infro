@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <title>Who is he?</title>
+        <link rel="stylesheet" type="text/css" href="whoIsHeCSS.css" />
+	</head>
+
+
+    <body background="backGround.gif">
+
+        <script>
+            var info, infoT, CD, CDT, schoolLife, SLT
+            infoT = "Personal infomation"
+            info = "I am an XJTLU  year 3 student studying Information and Computing Science. I'm born on Augest 13th, 1999, born and raised in Sichuan Chengdu." + " " +
+                "I've also spent two years in Xining and TaiYuan when I was little, eventually I went back to Chengdu to go to primary school."
+            CDT = "About CD"
+            CD = "Chengdu is a beautiful busy city with tremendous cultural deposit which witnessed thousands of years of prosperity. Among many famous historical sites in this great city, I" + " " +
+                "love Du Fu thatched cottage most for its owner was one of greatest poets in chinese history, my father is also a huge fan of his."
+            SLT = "Scool life"
+            schoolLife = "I am a quite ordinary student in XJTLU, in year 1 I joined 2 school clubs as a member, in year 2 I became a vice chair-man in SCDA-IT but then I found out that I am not capable of being" + " " +
+                "in such a position so I quit, I have being trying to be a better individual on the campus ever since."
+        </script>
+
+        <div id="header">
+            <h1>Who is he?</h1>
+        </div>
+
+        <div id="nav">
+            <button type="button" onclick='document.getElementById("content").innerHTML = info; document.getElementById("headline").innerHTML = infoT; document.getElementById("SpicBut").style.display = "none";
+                                            document.getElementById("HpicBut").style.display = "none";
+                                            document.getElementById("CDpic1").style.display = "none";
+                                            document.getElementById("CDpic2").style.display = "none";'
+                style="font-size:30px">Basic information</button><br />
+            <button type="button" onclick='document.getElementById("content").innerHTML = CD; document.getElementById("headline").innerHTML = CDT; document.getElementById("SpicBut").style.display = "block";
+                                            document.getElementById("HpicBut").style.display = "block";
+                                            document.getElementById("CDpic1").style.display = "none";
+                                            document.getElementById("CDpic2").style.display = "none";'
+                style="font-size:30px">About ChengDu</button><br />
+            <button type="button" onclick='document.getElementById("content").innerHTML = schoolLife; document.getElementById("headline").innerHTML = SLT; document.getElementById("SpicBut").style.display = "none";
+                                            document.getElementById("HpicBut").style.display = "none";
+                                            document.getElementById("CDpic1").style.display = "none";
+                                            document.getElementById("CDpic2").style.display = "none";'
+                style="font-size:30px">About school life</button>
+        </div>
+
+        <div id="section">
+            <h2 id="headline" style="font-size:45px"></h2>
+            <p id="content" style="font-size:30px"></p>
+            <button id="SpicBut" onclick='document.getElementById("CDpic1").style.display = "block"; document.getElementById("CDpic2").style.display = "block" ' style="display:none; font-size:20px">Show pictures</button>
+            <button id="HpicBut" onclick='document.getElementById("CDpic1").style.display = "none"; document.getElementById("CDpic2").style.display = "none" ' style="display:none; font-size:20px">Hide pictures</button>
+            <img id="CDpic1" style="display:none" src="CD1.jpg" alt="Chengdu" width="1280" height="720"/>
+            <img id="CDpic2" style="display:none" src="CD2.jpg" alt="Du fu thatched" width="1280" height="720"/>
+        </div>
+
+        <div id="footer">
+            <a href="home.html"><button style="font-size:30px">Back to homepage</button></a>
+        </div>
+    </body>
+</html>
